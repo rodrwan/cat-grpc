@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/rodrwan/cat-grpc/categoryapi";
+option java_multiple_files = true;
+option java_package = "io.grpc.finciero.category";
+option java_outer_classname = "CategoryAPIProto";
+
+service CategoryAPI {
+  rpc Categorize(Transaction) returns (Transaction) {}
+}
+
+message Empty {}
+
+message Transaction {
+  string Description = 1;
+  uint32 CategoryID = 2;
+  string CategoryName = 3;
+}

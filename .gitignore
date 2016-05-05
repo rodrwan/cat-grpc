@@ -1,0 +1,8 @@
+# not ignore makefile
+!Makefile
+server
+catty
+catty-osx
+client/client
+.env
+categoryapi
